@@ -1,12 +1,10 @@
 #Cognito上でCONFIRMED状態のユーザを作成するLambda関数
+#引数として、eventにemail, passwdを設定。
 import json
 import boto3
 
 user_pool_id = 'ap-northeast-1_qWRCAnSQr'
 clientid = '17tr8jgea0dehjq1nis0tm1nbf'
-
-#user_pool_id = 'ap-northeast-1_hnnrAtenr'
-#clientid = '77u5cte0ikrooosgl7pjp0ev57'
 
 cognito_client = boto3.client('cognito-idp',
             region_name = "ap-northeast-1"
